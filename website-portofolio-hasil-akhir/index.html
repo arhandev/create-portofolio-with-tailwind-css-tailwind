@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arhandev</title>
+		<link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#FF0000',
+							'gray-custom': '#313645',
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			#canvas-image {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script src="./scripts/granim.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	</head>
+	<body>
+		<header class="top-0 z-10 sticky w-full bg-white shadow-md hidden md:block">
+			<nav class="w-5/6 mx-auto flex justify-between py-6">
+				<div>
+					<img src="./assets/ARHANDEV ..svg" class="w-40" alt="" />
+				</div>
+				<ul class="flex gap-6">
+					<li onclick="scrollInto('intro')">Intro</li>
+					<li onclick="scrollInto('skills')">Skills</li>
+					<li onclick="scrollInto('speciality')">Speciality</li>
+					<li onclick="scrollInto('projects')">Projects</li>
+					<li onclick="scrollInto('contact')">Contact</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="m-6 md:hidden">
+			<img src="./assets/ARHANDEV ..svg" class="w-40" alt="" />
+		</div>
+		<div id="intro" class="mb-4 lg:mb-12 md:mb-0 md:h-screen">
+			<div class="flex flex-col mx-6 md:mx-0 md:flex-row gap-10 md:pl-32 md:mt-8">
+				<div data-aos="fade-up" data-aos-duration="800" class="md:w-1/2 py-6 md:py-12">
+					<h1 class="text-3xl md:text-5xl font-bold">
+						HI, <br />
+						I'm <span class="text-primary"> Farhan </span>
+						Dewanta
+					</h1>
+					<h3 class="md:text-xl mt-3">Fullstack Developer</h3>
+					<h2 class="font-bold text-lg md:text-2xl mt-10">
+						OPEN <span class="text-primary"> COLLABORATION </span>
+						TO MAKE
+					</h2>
+					<div class="font-black text-primary text-3xl md:text-5xl mt-4">
+						<span id="typed"></span>
+					</div>
+				</div>
+				<div
+					data-aos="fade-in"
+					data-aos-delay="800"
+					data-aos-duration="2000"
+					class="md:w-1/2 flex items-center justify-center"
+				>
+					<canvas id="canvas-image-blending" class="rounded-full w-96 h-96"></canvas>
+				</div>
+			</div>
+		</div>
+		<div id="skills" data-aos-duration="800" class="mx-auto w-5/6">
+			<h1 class="text-center text-3xl md:text-4xl font-bold mb-8">MY SKILLS</h1>
+			<h2 class="text-center mb-8 text-sm md:text-base">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada condimentum elit viverra amet. Tristique
+				cursus a sit sem pulvinar nibh enim, orci euismod.
+			</h2>
+			<div class="mt-16 flex flex-wrap justify-center item-center gap-16">
+				<img
+					src="./assets/HTML5-Logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="600"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/git-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="700"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/CSS-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="800"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/javascript-logo.png"
+					data-aos="flip-right"
+					data-aos-delay="900"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/dart-logo.png"
+					data-aos="flip-right"
+					data-aos-delay="1000"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/php-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1100"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/tailwind-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1200"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+			</div>
+			<div class="mt-16 flex flex-wrap justify-center item-center gap-16">
+				<img
+					src="./assets/laravel-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1300"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/React-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1400"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/flutter-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1500"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/vue-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1600"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/Node.js-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1700"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+				<img
+					src="./assets/next-logo.svg"
+					data-aos="flip-right"
+					data-aos-delay="1800"
+					data-aos-duration="800"
+					class="h-10 md:h-16"
+					alt=""
+				/>
+			</div>
+		</div>
+		<div id="speciality" data-aos-duration="1000" class="mx-auto w-5/6 mt-32">
+			<h1 class="font-bold text-3xl md:text-4xl my-12">WHAT I DO</h1>
+			<div class="grid md:grid-cols-2 gap-10">
+				<div
+					data-aos="slide-right"
+					data-aos-duration="1000"
+					class="border-2 rounded-lg p-4 shadow-md"
+				>
+					<h2 class="text-xl font-bold mb-4">Front End Development</h2>
+					<ul class="list-disc ml-6">
+						<li>Creating a website using the React js framework example</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+					</ul>
+				</div>
+				<div
+					data-aos="slide-left"
+					data-aos-duration="1000"
+					class="border-2 rounded-lg p-4 shadow-md"
+				>
+					<h2 class="text-xl font-bold mb-4">Back End Development</h2>
+					<ul class="list-disc ml-6">
+						<li>Creating a website using the React js framework example</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+					</ul>
+				</div>
+				<div
+					data-aos="zoom-in-right"
+					data-aos-duration="1000"
+					class="border-2 rounded-lg p-4 shadow-md"
+				>
+					<h2 class="text-xl font-bold mb-4">Flutter Development</h2>
+					<ul class="list-disc ml-6">
+						<li>Creating a website using the React js framework example</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+					</ul>
+				</div>
+				<div
+					data-aos="zoom-in-left"
+					data-aos-duration="1200"
+					class="border-2 rounded-lg p-4 shadow-md"
+				>
+					<h2 class="text-xl font-bold mb-4">Dev Ops</h2>
+					<ul class="list-disc ml-6">
+						<li>Creating a website using the React js framework example</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem elementum nisl amet massa amet. Elit ornare
+							leo vulputate fusce amet habitant aliquam.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="projects" class="mx-auto w-5/6 mt-32">
+			<h1 class="font-bold text-3xl md:text-4xl my-12">Projects</h1>
+			<div class="flex flex-col gap-8">
+				<div
+					data-aos="fade-left"
+					data-aos-duration="400"
+					class="flex flex-col xl:flex-row border-2 border-gray-600 rounded-xl p-8"
+				>
+					<div class="swiper mySwiper w-full md:w-2/3 lg:w-96">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide bg-none flex items-center justify-center">
+								<img src="./assets/jualanku/page-1.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/jualanku/page-2.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/jualanku/page-5.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="xl:w-1/2" data-aos="fade" data-aos-duration="1000" data-aos-delay="400">
+						<h1 class="mt-8 xl:mt-0 text-2xl font-bold text-[#f3a71b]">jualanku.link</h1>
+						<p class="mt-4">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, at rerum. Nihil cupiditate alias libero
+							maiores soluta quasi consectetur provident vel non culpa, dolorum fuga totam minima sit eaque ratione!
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Tech: </span>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium perferendis corrupti nam porro
+							beatae. Provident placeat eius perspiciatis optio! Id laudantium voluptatum animi eos maiores odit
+							ratione, assumenda cumque ipsam.
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Link: </span>
+							<a href="https://berbagi.link" class="text-[#f3a71b] hover:underline">jualanku.link</a>
+						</p>
+					</div>
+				</div>
+				<div
+					data-aos="fade-right"
+					data-aos-duration="400"
+					class="flex flex-col xl:flex-row-reverse border-2 border-gray-600 rounded-xl p-8"
+				>
+					<div class="swiper mySwiper w-full md:w-2/3 lg:w-96">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide bg-none flex items-center justify-center">
+								<img src="./assets/berbagi/page-1.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/berbagi/page-2.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="xl:w-1/2" data-aos="fade" data-aos-duration="1000" data-aos-delay="400">
+						<h1 class="mt-8 xl:mt-0 text-2xl font-bold text-[#18b0b3]">berbagi.link</h1>
+						<p class="mt-4">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, at rerum. Nihil cupiditate alias libero
+							maiores soluta quasi consectetur provident vel non culpa, dolorum fuga totam minima sit eaque ratione!
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Tech: </span>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium perferendis corrupti nam porro
+							beatae. Provident placeat eius perspiciatis optio! Id laudantium voluptatum animi eos maiores odit
+							ratione, assumenda cumque ipsam.
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Link: </span>
+							<a href="https://berbagi.link" class="text-[#18b0b3] hover:underline">berbagi.link</a>
+						</p>
+					</div>
+				</div>
+				<div
+					data-aos="fade-left"
+					data-aos-duration="400"
+					class="flex flex-col xl:flex-row border-2 border-gray-600 rounded-xl p-8"
+				>
+					<div class="swiper mySwiper w-full md:w-2/3 lg:w-96">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide bg-none flex items-center justify-center">
+								<img src="./assets/designforlife/page-1.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/designforlife/page-2.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/designforlife/page-3.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="xl:w-1/2" data-aos="fade" data-aos-duration="1000" data-aos-delay="400">
+						<h1 class="mt-8 xl:mt-0 text-2xl font-bold text-[#FD1099]">designforlife.id</h1>
+						<p class="mt-4">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, at rerum. Nihil cupiditate alias libero
+							maiores soluta quasi consectetur provident vel non culpa, dolorum fuga totam minima sit eaque ratione!
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Tech: </span>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium perferendis corrupti nam porro
+							beatae. Provident placeat eius perspiciatis optio! Id laudantium voluptatum animi eos maiores odit
+							ratione, assumenda cumque ipsam.
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Link: </span>
+							<a href="https://designforlife.id" class="text-[#FD1099] hover:underline">designforlife.id</a>
+						</p>
+					</div>
+				</div>
+				<div
+					data-aos="fade-right"
+					data-aos-duration="400"
+					class="flex flex-col xl:flex-row-reverse border-2 border-gray-600 rounded-xl p-8"
+				>
+					<div class="swiper mySwiper w-full md:w-2/3 lg:w-96">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide bg-none flex items-center justify-center">
+								<img src="./assets/bisakasir/page-1.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/bisakasir/page-2.png" alt="" />
+							</div>
+							<div class="swiper-slide flex items-center justify-center">
+								<img src="./assets/bisakasir/page-3.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="xl:w-1/2" data-aos="fade" data-aos-duration="1000" data-aos-delay="400">
+						<h1 class="mt-8 xl:mt-0 text-2xl font-bold text-[#54c0ca]">bisakasir</h1>
+						<p class="mt-4">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, at rerum. Nihil cupiditate alias libero
+							maiores soluta quasi consectetur provident vel non culpa, dolorum fuga totam minima sit eaque ratione!
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Tech: </span>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium perferendis corrupti nam porro
+							beatae. Provident placeat eius perspiciatis optio! Id laudantium voluptatum animi eos maiores odit
+							ratione, assumenda cumque ipsam.
+						</p>
+						<p class="mt-8">
+							<span class="font-bold"> Link: </span>
+							<a href="https://designforlife.id" class="text-[#54c0ca] hover:underline">bisakasir.id</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact" class="mt-24 pt-12 pb-10 md:pb-24 bg-gray-custom">
+			<div class="mx-4 md:mx-auto md:w-5/6">
+				<h1 class="md:text-3xl font-bold text-white leading-8 md:leading-10">
+					CALL ME FOR
+					<span class="text-primary"> COLLABORATION </span>
+					OPPORTUNITIES <br />
+					AND MAKE SOMETHING <span class="text-primary"> AMAZING! </span>
+				</h1>
+				<div class="mt-4 md:mt-12 grid md:grid-cols-2">
+					<div class="flex items-center gap-4">
+						<img src="./assets/github-logo.png" class="w-6 md:w-8" alt="" />
+						<img src="./assets/github-logo.png" class="w-6 md:w-8" alt="" />
+						<img src="./assets/github-logo.png" class="w-6 md:w-8" alt="" />
+					</div>
+					<div class="mt-8">
+						<div class="mx-8 md:mx-0 md:w-3/4 flex flex-col gap-3">
+							<input
+								id="input-name"
+								type="text"
+								placeholder="Name"
+								class="pl-6 py-0.5 rounded-sm placeholder:text-gray-400"
+							/>
+							<input
+								id="input-email"
+								type="text"
+								placeholder="Email"
+								class="pl-6 py-0.5 rounded-sm placeholder:text-gray-400"
+							/>
+							<input
+								id="input-phone"
+								type="text"
+								placeholder="Phone"
+								class="pl-6 py-0.5 rounded-sm placeholder:text-gray-400"
+							/>
+							<textarea
+								name=""
+								id="input-body"
+								rows="5"
+								placeholder="Type your message here..."
+								class="pl-6 py-0.5 rounded-sm placeholder:text-gray-400"
+							></textarea>
+							<button onclick="sendEmail()" class="self-end text-primary px-6 py-1 bg-white rounded-sm mt-2">
+								Submit
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="py-3 bg-primary text-white text-center text-xs md:text-base">
+			© 2022 by Arhandev. All rights reserved.
+		</div>
+	</body>
+	<script>
+		function scrollInto(id) {
+			const element = document.getElementById(id);
+			const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset + -100;
+			window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
+		}
+
+		function sendEmail() {
+			let params = {
+				name: document.getElementById('input-name').value,
+				email: document.getElementById('input-email').value,
+				phone: document.getElementById('input-phone').value,
+				body: document.getElementById('input-body').value,
+			};
+			emailjs
+				.send('service_25n1wwh', 'template_roi16bx', params)
+				.then(response => {
+					console.log(response);
+					document.getElementById('input-name').value = '';
+					document.getElementById('input-email').value = '';
+					document.getElementById('input-phone').value = '';
+					document.getElementById('input-body').value = '';
+					alert('Berhasil Kirim Email');
+				})
+				.catch(error => {
+					console.log(error);
+					alert('Gagal Mengirim Email');
+				});
+		}
+		AOS.init();
+
+		(function () {
+			emailjs.init('5Wyd-qeWhGBrZ1-Dp');
+		})();
+		var typed = new Typed('#typed', {
+			strings: ['Web Application', 'Mobile Application', 'Backend Application'],
+			loop: true,
+			typeSpeed: 80,
+			backSpeed: 40,
+			backDelay: 1000,
+		});
+
+		var granimInstance = new Granim({
+			element: '#canvas-image-blending',
+			isPausedWhenNotInView: true,
+			image: {
+				source: './assets/picture.png',
+				position: ['center', 'center'],
+				stretchMode: ['stretch', 'stretch'],
+				blendingMode: 'destination-over',
+			},
+			states: {
+				'default-state': {
+					gradients: [
+						['#ff5656', '#ff6672'],
+						['#ff6672', '#dddddd'],
+						['#dddddd', '#ff6672'],
+						['#ff6672', '#ff5656'],
+					],
+					transitionSpeed: 1000,
+				},
+			},
+		});
+		var swiper = new Swiper('.mySwiper', {
+			effect: 'cards',
+			grabCursor: true,
+			cardsEffect: {
+				slideShadows: false,
+			},
+		});
+	</script>
+</html>
